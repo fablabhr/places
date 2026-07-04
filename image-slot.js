@@ -102,6 +102,7 @@ class ImageSlot extends HTMLElement {
         width: '100%', height: '100%',
         objectFit: 'cover',
       });
+      this._img.src = url;
       this.insertBefore(this._img, this._label);
     }
     this._label.style.display = 'none';
