@@ -11,7 +11,14 @@
       const helmet = this.querySelector(':scope > helmet');
       if (helmet) {
         Array.from(helmet.childNodes).forEach(node => {
-          document.head.appendChild(node.cloneNode(true));
+          if (node.nodeName === 'SCRIPT') {
+            const s = document.createElement('script');
+            Array.from(node.attributes).forEach(a => s.setAttribute(a.name, a.value));
+            if (!node.src) s.textContent = node.textContent;
+            document.head.appendChild(s);
+          } else {
+            document.head.appendChild(node.cloneNode(true));
+          }
         });
         helmet.remove();
       }
