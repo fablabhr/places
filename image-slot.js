@@ -66,6 +66,10 @@ class ImageSlot extends HTMLElement {
     this._input.style.display = 'none';
     this.appendChild(this._input);
 
+    // Pre-fill from src attribute
+    const src = this.getAttribute('src');
+    if (src) this._loadUrl(src);
+
     // Events
     this.addEventListener('click', () => this._input.click());
 
@@ -88,8 +92,7 @@ class ImageSlot extends HTMLElement {
     });
   }
 
-  _load(file) {
-    const url = URL.createObjectURL(file);
+  _loadUrl(url) {
     if (this._img) {
       this._img.src = url;
     } else {
@@ -103,6 +106,11 @@ class ImageSlot extends HTMLElement {
     }
     this._label.style.display = 'none';
   }
+
+  _load(file) {
+    this._loadUrl(URL.createObjectURL(file));
+  }
+
 }
 
 customElements.define('image-slot', ImageSlot);
