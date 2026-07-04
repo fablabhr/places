@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fablab — Location Briefing</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    background: #103B37;
+    color: #FAF8F4;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    text-align: center;
+    padding: 64px 48px;
+    max-width: 560px;
+  }
+  .mark {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 32px;
+  }
+  h1 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .sub {
+    font-size: 16px;
+    color: rgba(250,248,244,0.55);
+    margin-bottom: 48px;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  a.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    transition: opacity .15s;
+  }
+  a.btn:hover { opacity: .85; }
+  a.btn.en { background: #209F93; color: #fff; }
+  a.btn.hr { background: rgba(255,255,255,0.12); color: #FAF8F4; border: 1px solid rgba(255,255,255,0.2); }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+  <svg class="mark" viewBox="0 0 82 82" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(41,41)">
+      <circle r="28" fill="none" stroke="#209F93" stroke-width="3"/>
+      <circle r="13" fill="#0d2e2b"/>
+      <line x1="-28" y1="0" x2="-13" y2="0" stroke="#209F93" stroke-width="2.5"/>
+      <line x1="13" y1="0" x2="28" y2="0" stroke="#209F93" stroke-width="2.5"/>
+      <line x1="0" y1="-28" x2="0" y2="-13" stroke="#209F93" stroke-width="2.5"/>
+      <line x1="0" y1="13" x2="0" y2="28" stroke="#209F93" stroke-width="2.5"/>
+      <circle cx="-20" cy="-20" r="3" fill="#209F93"/>
+      <circle cx="20" cy="-20" r="3" fill="#209F93"/>
+      <circle cx="20" cy="20" r="3" fill="#209F93"/>
+      <circle cx="-20" cy="20" r="3" fill="#209F93"/>
+      <circle r="4" fill="#209F93"/>
+    </g>
+  </svg>
+  <p class="sub">Fablab · Location briefing</p>
+  <h1>Adaptive Reuse<br>across Croatia</h1>
+  <p style="color:rgba(250,248,244,0.6);margin:16px 0 40px;font-size:17px;line-height:1.6;">Four abandoned public sites and the community future we propose for each.</p>
+  <div class="btns">
+    <a class="btn en" href="Locations Deck.dc.html">English &nbsp;EN</a>
+    <a class="btn hr" href="Lokacije.dc.html">Hrvatski &nbsp;HR</a>
+  </div>
+</div>
+</body>
+</html>
